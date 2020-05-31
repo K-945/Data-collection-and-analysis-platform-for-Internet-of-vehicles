@@ -10,7 +10,7 @@ from kafka.structs import TopicPartition
 
 Topic = 'user3'
 group_name = Topic
-server = '123.57.8.28:9092'
+server = 'localhost'
 '''
 consumer = KafkaConsumer('creditcard-test-0',
                          bootstrap_servers='localhost:9092',
@@ -26,12 +26,12 @@ consumer = KafkaConsumer(Topic,
                          auto_offset_reset='earliest')
 print('consumer start to consuming...')
 consumer.subscribe((Topic, ))
-consumer.seek(TopicPartition(topic=Topic, partition=0), 0)
+#consumer.seek(TopicPartition(topic=Topic, partition=0), 0)
 
 #while True:
-for i in range(3):
-    msg = consumer.poll(timeout_ms=5)   #从kafka获取消息
-    print(msg)
+#for i in range(3):
+#    msg = consumer.poll(timeout_ms=5)   #从kafka获取消息
+#    print(msg)
 
 filename = 'data-sensor.txt'
 output = open(filename,'w')
