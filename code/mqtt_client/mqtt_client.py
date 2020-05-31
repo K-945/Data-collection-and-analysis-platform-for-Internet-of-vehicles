@@ -45,7 +45,7 @@ class MqttClient:
  
 if __name__ == '__main__':
 #    main()
-    host = "123.57.8.28"
+    host = "localhost"
     port = 1883
     #topic = "CarTest"
     topic = "user3"
